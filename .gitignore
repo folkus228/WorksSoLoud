@@ -1,0 +1,36 @@
+.vs/
+.vscode/
+*.sdf
+*.suo
+*.user
+*.vcxproj.user
+*.pdb
+*.cache
+*.dbmdl
+
+# Build output directories
+[bB]in/
+[Oo]bj/
+x64/
+x86/
+Debug/
+Release/
+*.vs/
+
+# Automatically generated files
+*.ncb
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.ipch
+*.dbmdl
+*.bak
+
+# Others
+# *.dll
+# *.lib
+*.exp
+*.obj
+*.pch
+*.ipch
