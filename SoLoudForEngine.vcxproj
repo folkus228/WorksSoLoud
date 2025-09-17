@@ -103,13 +103,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\all\proj\visual\SoLoudForEngine\imgui-master\backends;C:\all\proj\visual\SoLoudForEngine\imgui-master;C:\all\proj\visual\SoLoudForEngine\glfw\include;C:\all\proj\visual\SoLoudForEngine\glad\include;C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>soloud_static_x64_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\all\proj\visual\SoLoudForEngine\glfw\lib-vc2022;C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>soloud_static_x64_d.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,17 +121,35 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\all\proj\visual\SoLoudForEngine\imgui-master\backends;C:\all\proj\visual\SoLoudForEngine\imgui-master;C:\all\proj\visual\SoLoudForEngine\glfw\include;C:\all\proj\visual\SoLoudForEngine\glad\include;C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>soloud_static_x64_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\all\proj\visual\SoLoudForEngine\glfw\lib-vc2022;C:\all\proj\visual\SoLoudForEngine\soloud-RELEASE_20200207\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>soloud_static_x64_d.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="glad\src\glad.c" />
+    <ClCompile Include="imgui-master\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="imgui-master\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui-master\imgui.cpp" />
+    <ClCompile Include="imgui-master\imgui_demo.cpp" />
+    <ClCompile Include="imgui-master\imgui_draw.cpp" />
+    <ClCompile Include="imgui-master\imgui_tables.cpp" />
+    <ClCompile Include="imgui-master\imgui_widgets.cpp" />
+    <ClCompile Include="main_test_widget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imgui-master\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="imgui-master\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui-master\imconfig.h" />
+    <ClInclude Include="imgui-master\imgui.h" />
+    <ClInclude Include="imgui-master\imgui_internal.h" />
+    <ClInclude Include="imgui-master\imstb_rectpack.h" />
+    <ClInclude Include="imgui-master\imstb_textedit.h" />
+    <ClInclude Include="imgui-master\imstb_truetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

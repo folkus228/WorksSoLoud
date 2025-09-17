@@ -113,8 +113,8 @@ public:
 
         // Двигаем источник звука по кругу
         const float radius = 5.0f;
-        const float duration = 8.0f; // секунд на полный оборот
-        const float steps = 100;
+        const float duration = 20.0f; // секунд на полный оборот
+        const float steps = 200;
         const float angleStep = (2.0f * 3.14159f) / steps;
         const float timeStep = duration / steps;
 
